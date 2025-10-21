@@ -160,7 +160,7 @@
         </div>
 
         <div class="gallery">
-          <img src="https://images.unsplash.com/photo-1529336953121-dc2d1e9f1b48?q=80&w=1200&auto=format&fit=crop" alt="Workspace" />
+          <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hhcmVkJTIwb2ZmaWNlfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000" alt="Workspace" />
           <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Team meeting" />
           <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1200&auto=format&fit=crop" alt="Creative moodboard" />
           <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop" alt="Office hallway" />
@@ -179,7 +179,7 @@
           <label for="email" data-i18n="contact.email">Email</label>
           <input id="email" name="email" type="email" required />
           <label for="message" data-i18n="contact.message">Message</label>
-          <textarea id="message" name="message" placeholder="What would you like to achieve?" required></textarea>
+          <textarea id="message" name="message" placeholder="What would you like to achieve?" data-i18n="contact.placeholder" required></textarea>
           <div style="margin-top:16px"><button class="btn" type="submit" data-i18n="contact.btn">Send message</button></div>
           <p style="color:var(--muted);font-size:12px;margin-top:10px" data-i18n="contact.note">This form is powered by Netlify Forms. By submitting, you agree to be contacted by Breaking Path.</p>
         </form>
@@ -208,61 +208,111 @@
     document.getElementById('y').textContent = new Date().getFullYear();
 
     const dict = {
-      en: {
-        "nav.services":"Services","nav.about":"About","nav.cta":"Get in touch",
-        "hero.tag":"Digital Growth Agency",
-        "hero.titleHTML":"Guiding brands <span style=\\"background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent\\">beyond limits</span>.",
-        "hero.desc":"Breaking Path is an international marketing agency helping companies expand their presence through data‑driven strategy, creative storytelling, and performance advertising. We operate across the Americas and Europe, building scalable growth playbooks for modern brands.",
-        "hero.cta":"Start a conversation","hero.secondary":"Explore services",
-        "stats.one.h":"100+ brands","stats.one.p":"helped to scale internationally",
-        "stats.two.h":"$50M+","stats.two.p":"managed in ad spend across channels",
-        "stats.three.h":"7 markets","stats.three.p":"localized growth frameworks",
-        "services.title":"What we do",
-        "services.lead":"We combine performance marketing with brand strategy to help you grow sustainably and expand across borders.",
-        "services.s1.h":"Performance Marketing","services.s1.p":"Full‑funnel paid media across Meta, Google, TikTok and programmatic. We plan, launch and iterate fast, optimizing for CAC, ROAS and LTV.",
-        "services.s2.h":"Brand & Creative","services.s2.p":"Messaging architecture, creative direction, and content systems that amplify your story and lift conversion rates.",
-        "services.s3.h":"Web & CRO","services.s3.p":"High‑performance websites and landing pages with analytics and experimentation to improve user experience and sales.",
-        "services.s4.h":"Market Localization","services.s4.p":"Go‑to‑market playbooks for the US, LATAM and EU — language, compliance, and channel strategy tailored to each region.",
-        "about.title":"About Breaking Path",
-        "about.lead":"We were founded with a simple belief: growth happens when you clear the way. Our team brings experience across ecommerce, SaaS and consumer brands — aligning strategy, creative and analytics to unlock new paths.",
-        "about.q1.t":"“Breaking Path is more than an agency — they are our growth partner.”","about.q1.w":"John Miller — Founder, BrightLabs",
-        "about.q2.t":"“They helped us structure international campaigns and streamline our analytics. Results came fast.”","about.q2.w":"Sophia Reyes — CMO, NorthPeak",
-        "about.q3.t":"“Clear process, senior team, and strong creative. Highly recommended.”","about.q3.w":"Daniel Kim — CEO, Novora",
-        "contact.title":"Let’s talk","contact.lead":"Tell us a bit about your goals. We’ll get back within 1–2 business days.",
-        "contact.name":"Name","contact.email":"Email","contact.message":"Message","contact.btn":"Send message",
-        "contact.note":"This form is powered by Netlify Forms. By submitting, you agree to be contacted by Breaking Path.",
-        "contact.card.title":"Contact","contact.card.emailL":"Email:","contact.card.phoneL":"Phone (US):","contact.card.addrL":"Address (US):",
-        "contact.card.hoursL":"Business hours:","contact.card.hoursV":"Mon–Fri, 9:00–18:00 (MT)",
-        "footer.rights":"All rights reserved.","footer.privacy":"Privacy","footer.terms":"Terms","footer.contact":"Contact"
-      },
-      es: {
-        "nav.services":"Servicios","nav.about":"Nosotros","nav.cta":"Contacto",
-        "hero.tag":"Agencia de Crecimiento Digital",
-        "hero.titleHTML":"Guiando marcas <span style=\\"background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent\\">más allá de los límites</span>.",
-        "hero.desc":"Breaking Path es una agencia internacional de marketing que ayuda a las empresas a expandir su presencia mediante estrategia basada en datos, storytelling creativo y publicidad de rendimiento. Operamos en las Américas y Europa, construyendo playbooks escalables de crecimiento para marcas modernas.",
-        "hero.cta":"Iniciar conversación","hero.secondary":"Ver servicios",
-        "stats.one.h":"100+ marcas","stats.one.p":"impulsadas a escalar internacionalmente",
-        "stats.two.h":"US$50M+","stats.two.p":"gestionados en inversión publicitaria multicanal",
-        "stats.three.h":"7 mercados","stats.three.p":"marcos de crecimiento localizados",
-        "services.title":"Qué hacemos",
-        "services.lead":"Combinamos performance marketing con estrategia de marca para ayudarte a crecer de forma sostenible y expandirte a nuevos mercados.",
-        "services.s1.h":"Performance Marketing","services.s1.p":"Publicidad full‑funnel en Meta, Google, TikTok y programática. Planificamos, lanzamos y iteramos rápido, optimizando CAC, ROAS y LTV.",
-        "services.s2.h":"Marca y Creatividad","services.s2.p":"Arquitectura de mensajes, dirección creativa y sistemas de contenido que amplifican tu historia y elevan la conversión.",
-        "services.s3.h":"Web y CRO","services.s3.p":"Sitios y landings de alto rendimiento con analítica y experimentación para mejorar la experiencia y las ventas.",
-        "services.s4.h":"Localización de Mercados","services.s4.p":"Playbooks de go‑to‑market para EE. UU., LATAM y UE — idioma, cumplimiento y canales adaptados a cada región.",
-        "about.title":"Sobre Breaking Path",
-        "about.lead":"Nacimos con una creencia simple: el crecimiento sucede cuando despejas el camino. Nuestro equipo aporta experiencia en ecommerce, SaaS y marcas de consumo — alineando estrategia, creatividad y analítica para abrir nuevas rutas.",
-        "about.q1.t":"“Breaking Path es más que una agencia — son nuestro socio de crecimiento.”","about.q1.w":"John Miller — Fundador, BrightLabs",
-        "about.q2.t":"“Nos ayudaron a estructurar campañas internacionales y optimizar la analítica. Los resultados llegaron rápido.”","about.q2.w":"Sophia Reyes — CMO, NorthPeak",
-        "about.q3.t":"“Proceso claro, equipo senior y gran creatividad. Altamente recomendados.”","about.q3.w":"Daniel Kim — CEO, Novora",
-        "contact.title":"Hablemos","contact.lead":"Cuéntanos tus objetivos. Responderemos en 1–2 días hábiles.",
-        "contact.name":"Nombre","contact.email":"Correo electrónico","contact.message":"Mensaje","contact.btn":"Enviar",
-        "contact.note":"Este formulario funciona con Netlify Forms. Al enviar, aceptas ser contactado por Breaking Path.",
-        "contact.card.title":"Contacto","contact.card.emailL":"Email:","contact.card.phoneL":"Teléfono (EE. UU.):","contact.card.addrL":"Dirección (EE. UU.):",
-        "contact.card.hoursL":"Horario:","contact.card.hoursV":"Lun–Vie, 9:00–18:00 (MT)",
-        "footer.rights":"Todos los derechos reservados.","footer.privacy":"Privacidad","footer.terms":"Términos","footer.contact":"Contacto"
-      }
-    };
+  en: {
+    "nav.services": "Services",
+    "nav.about": "About",
+    "nav.cta": "Get in touch",
+    "hero.tag": "Digital Growth Agency",
+    "hero.titleHTML": "Guiding brands <span style=\"background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent\">beyond limits</span>.",
+    "hero.desc": "Breaking Path is an international marketing agency helping companies expand their presence through data‑driven strategy, creative storytelling, and performance advertising. We operate across the Americas and Europe, building scalable growth playbooks for modern brands.",
+    "hero.cta": "Start a conversation",
+    "hero.secondary": "Explore services",
+    "stats.one.h": "100+ brands",
+    "stats.one.p": "helped to scale internationally",
+    "stats.two.h": "$50M+",
+    "stats.two.p": "managed in ad spend across channels",
+    "stats.three.h": "7 markets",
+    "stats.three.p": "localized growth frameworks",
+    "services.title": "What we do",
+    "services.lead": "We combine performance marketing with brand strategy to help you grow sustainably and expand across borders.",
+    "services.s1.h": "Performance Marketing",
+    "services.s1.p": "Full‑funnel paid media across Meta, Google, TikTok and programmatic. We plan, launch and iterate fast, optimizing for CAC, ROAS and LTV.",
+    "services.s2.h": "Brand & Creative",
+    "services.s2.p": "Messaging architecture, creative direction, and content systems that amplify your story and lift conversion rates.",
+    "services.s3.h": "Web & CRO",
+    "services.s3.p": "High‑performance websites and landing pages with analytics and experimentation to improve user experience and sales.",
+    "services.s4.h": "Market Localization",
+    "services.s4.p": "Go‑to‑market playbooks for the US, LATAM and EU — language, compliance, and channel strategy tailored to each region.",
+    "about.title": "About Breaking Path",
+    "about.lead": "We were founded with a simple belief: growth happens when you clear the way. Our team brings experience across ecommerce, SaaS and consumer brands — aligning strategy, creative and analytics to unlock new paths.",
+    "about.q1.t": "“Breaking Path is more than an agency — they are our growth partner.”",
+    "about.q1.w": "John Miller — Founder, BrightLabs",
+    "about.q2.t": "“They helped us structure international campaigns and streamline our analytics. Results came fast.”",
+    "about.q2.w": "Sophia Reyes — CMO, NorthPeak",
+    "about.q3.t": "“Clear process, senior team, and strong creative. Highly recommended.”",
+    "about.q3.w": "Daniel Kim — CEO, Novora",
+    "contact.title": "Let’s talk",
+    "contact.lead": "Tell us a bit about your goals. We’ll get back within 1–2 business days.",
+    "contact.name": "Name",
+    "contact.email": "Email",
+    "contact.message": "Message",
+    "contact.placeholder": "What would you like to achieve?",
+    "contact.btn": "Send message",
+    "contact.note": "This form is powered by Netlify Forms. By submitting, you agree to be contacted by Breaking Path.",
+    "contact.card.title": "Contact",
+    "contact.card.emailL": "Email:",
+    "contact.card.phoneL": "Phone (US):",
+    "contact.card.addrL": "Address (US):",
+    "contact.card.hoursL": "Business hours:",
+    "contact.card.hoursV": "Mon–Fri, 9:00–18:00 (MT)",
+    "footer.rights": "All rights reserved.",
+    "footer.privacy": "Privacy",
+    "footer.terms": "Terms",
+    "footer.contact": "Contact"
+  },
+  es: {
+    "nav.services": "Servicios",
+    "nav.about": "Nosotros",
+    "nav.cta": "Contacto",
+    "hero.tag": "Agencia de Crecimiento Digital",
+    "hero.titleHTML": "Guiando marcas <span style=\"background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent\">más allá de los límites</span>.",
+    "hero.desc": "Breaking Path es una agencia internacional de marketing que ayuda a las empresas a expandir su presencia mediante estrategia basada en datos, storytelling creativo y publicidad de rendimiento. Operamos en las Américas y Europa, construyendo playbooks escalables de crecimiento para marcas modernas.",
+    "hero.cta": "Iniciar conversación",
+    "hero.secondary": "Ver servicios",
+    "stats.one.h": "100+ marcas",
+    "stats.one.p": "impulsadas a escalar internacionalmente",
+    "stats.two.h": "US$50M+",
+    "stats.two.p": "gestionados en inversión publicitaria multicanal",
+    "stats.three.h": "7 mercados",
+    "stats.three.p": "marcos de crecimiento localizados",
+    "services.title": "Qué hacemos",
+    "services.lead": "Combinamos performance marketing con estrategia de marca para ayudarte a crecer de forma sostenible y expandirte a nuevos mercados.",
+    "services.s1.h": "Performance Marketing",
+    "services.s1.p": "Publicidad full‑funnel en Meta, Google, TikTok y programática. Planificamos, lanzamos y iteramos rápido, optimizando CAC, ROAS y LTV.",
+    "services.s2.h": "Marca y Creatividad",
+    "services.s2.p": "Arquitectura de mensajes, dirección creativa y sistemas de contenido que amplifican tu historia y elevan la conversión.",
+    "services.s3.h": "Web y CRO",
+    "services.s3.p": "Sitios y landings de alto rendimiento con analítica y experimentación para mejorar la experiencia y las ventas.",
+    "services.s4.h": "Localización de Mercados",
+    "services.s4.p": "Playbooks de go‑to‑market para EE. UU., LATAM y UE — idioma, cumplimiento y canales adaptados a cada región.",
+    "about.title": "Sobre Breaking Path",
+    "about.lead": "Nacimos con una creencia simple: el crecimiento sucede cuando despejas el camino. Nuestro equipo aporta experiencia en ecommerce, SaaS y marcas de consumo — alineando estrategia, creatividad y analítica para abrir nuevas rutas.",
+    "about.q1.t": "“Breaking Path es más que una agencia — son nuestro socio de crecimiento.”",
+    "about.q1.w": "John Miller — Fundador, BrightLabs",
+    "about.q2.t": "“Nos ayudaron a estructurar campañas internacionales y optimizar la analítica. Los resultados llegaron rápido.”",
+    "about.q2.w": "Sophia Reyes — CMO, NorthPeak",
+    "about.q3.t": "“Proceso claro, equipo senior y gran creatividad. Altamente recomendados.”",
+    "about.q3.w": "Daniel Kim — CEO, Novora",
+    "contact.title": "Hablemos",
+    "contact.lead": "Cuéntanos tus objetivos. Responderemos en 1–2 días hábiles.",
+    "contact.name": "Nombre",
+    "contact.email": "Correo electrónico",
+    "contact.message": "Mensaje",
+    "contact.placeholder": "¿Qué te gustaría lograr?",
+    "contact.btn": "Enviar",
+    "contact.note": "Este formulario funciona con Netlify Forms. Al enviar, aceptas ser contactado por Breaking Path.",
+    "contact.card.title": "Contacto",
+    "contact.card.emailL": "Email:",
+    "contact.card.phoneL": "Teléfono (EE. UU.):",
+    "contact.card.addrL": "Dirección (EE. UU.):",
+    "contact.card.hoursL": "Horario:",
+    "contact.card.hoursV": "Lun–Vie, 9:00–18:00 (MT)",
+    "footer.rights": "Todos los derechos reservados.",
+    "footer.privacy": "Privacidad",
+    "footer.terms": "Términos",
+    "footer.contact": "Contacto"
+  }
+};
 
     const selectors = [...document.querySelectorAll('[data-i18n]')];
     const titleNode = document.getElementById('hero-title');
@@ -270,16 +320,30 @@
     const btnEs = document.getElementById('btn-es');
 
     function applyLang(lang){
+    btnEn.setAttribute('aria-label', lang === 'en' ? 'Switch to English' : 'Cambiar a español');
+    btnEs.setAttribute('aria-label', lang === 'en' ? 'Cambiar a español' : 'Switch to English');
       document.documentElement.lang = lang;
       selectors.forEach(el => {
+        const textarea = document.getElementById('message');
+        textarea.placeholder = dict[lang]['contact.placeholder'] || '';
         const key = el.getAttribute('data-i18n');
         const value = dict[lang][key];
         if(!value) return;
         el.textContent = value;
       });
+      // Traduz placeholder do textarea
+const textarea = document.querySelector('#message');
+if (textarea) {
+  textarea.placeholder = dict[lang]['contact.placeholder'] || 'What would you like to achieve?';
+}
+
+// Atualiza aria-labels dinâmicos pros botões
+btnEn.setAttribute('aria-label', lang === 'en' ? 'Switch to English' : 'Cambiar a español');
+btnEs.setAttribute('aria-label', lang === 'en' ? 'Cambiar a español' : 'Switch to English');
       titleNode.innerHTML = dict[lang]['hero.titleHTML'];
       btnEn.classList.toggle('active', lang==='en');
       btnEs.classList.toggle('active', lang==='es');
+
     }
 
     // Language toggle handlers
