@@ -1,30 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta charset="utf-8" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Breaking Path — Digital Growth Agency</title>
   <meta name="description" content="Breaking Path is an international marketing and digital growth agency. We help brands expand with data-driven strategy, creative storytelling, and performance advertising." />
   <meta property="og:title" content="Breaking Path — Digital Growth Agency" />
   <meta property="og:description" content="International marketing agency focused on performance, brand strategy, and cross‑border expansion." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/og-image.jpg" />
+  <meta property="og:image" content="/assets/logo-breaking.png" />
   <meta name="theme-color" content="#0a0a0a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="canonical" href="https://breakingpath.com/">
   <style>
     :root{
       --bg: #0a0a0a;
       --card: #101010;
       --muted: #b7b7b7;
       --text: #f5f5f5;
-      --gold: #d4af37; /* metallic gold */
-      --gold-2: #b08d2f; /* darker gold for gradient */
-      --accent: #f0d57a; /* subtle highlight */
+      --gold: #d4af37;
+      --gold-2: #b08d2f;
+      --accent: #f0d57a;
       --radius: 16px;
       --shadow: 0 10px 30px rgba(0,0,0,.45);
     }
@@ -34,28 +31,27 @@
     img{max-width:100%;height:auto}
     .container{width:min(1140px,92%);margin-inline:auto}
     header{position:sticky;top:0;backdrop-filter:saturate(120%) blur(8px);background:rgba(10,10,10,.6);border-bottom:1px solid #1d1d1d;z-index:20}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;gap:12px;align-items:center}
-    .brand__icon{width:30px;height:30px;display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-2));clip-path:path('M 0 22 L 10 12 L 20 22 L 20 14 L 10 4 L 0 14 Z');border-radius:6px;box-shadow:0 4px 16px rgba(212,175,55,.35)}
+    .brand img{height:40px}
     .brand__name{font-weight:700;letter-spacing:.4px}
     .nav a{opacity:.9}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:linear-gradient(140deg,var(--gold),var(--gold-2));color:#0a0a0a;font-weight:700;box-shadow:0 8px 22px rgba(212,175,55,.25);border:0;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:linear-gradient(140deg,var(--gold),var(--gold-2));color:#0a0a0a;font-weight:700;box-shadow:0 8px 22px rgba(212,175,55,.25);border:0;cursor:pointer}
     .btn.ghost{background:transparent;color:var(--text);border:1px solid #2a2a2a}
     .grid{display:grid;gap:28px}
-
-    /* HERO */
-    .hero{padding:96px 0 56px;border-bottom:1px solid #161616;background:radial-gradient(1200px 500px at 10% -10%, rgba(212,175,55,.08), transparent 50%), radial-gradient(900px 400px at 90% 0%, rgba(176,141,47,.06), transparent 60%)}
+    .lang-switch{display:flex;gap:10px;align-items:center}
+    .lang-switch button{background:transparent;border:1px solid #2a2a2a;color:var(--text);padding:8px 12px;border-radius:999px;cursor:pointer}
+    .lang-switch button.active{border-color:var(--gold);color:var(--accent)}
+    .hero{padding:70px 0 40px;border-bottom:1px solid #161616;background:radial-gradient(1200px 500px at 10% -10%, rgba(212,175,55,.08), transparent 50%), radial-gradient(900px 400px at 90% 0%, rgba(176,141,47,.06), transparent 60%)}
     .hero h1{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(36px,5vw,56px);line-height:1.05;margin:0}
     .hero p{font-size:clamp(16px,2.3vw,19px);opacity:.9;margin:18px 0 26px;max-width:780px}
     .hero .actions{display:flex;flex-wrap:wrap;gap:14px}
-
-    /* STATS */
+    .hero-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:26px}
+    .hero-strip img{width:100%;height:100px;object-fit:cover;border-radius:10px;filter:grayscale(.1) contrast(1.05)}
     .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:26px 0}
     .stat{background:linear-gradient(180deg,#0f0f0f,#0c0c0c);border:1px solid #1c1c1c;border-radius:var(--radius);padding:20px 18px;box-shadow:var(--shadow)}
     .stat h3{margin:0;font-size:28px;background:linear-gradient(135deg,var(--accent),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
     .stat p{margin:8px 0 0;color:var(--muted);font-size:14px}
-
-    /* SERVICES */
     .section{padding:70px 0;border-bottom:1px solid #161616}
     .section h2{font-family:"Playfair Display",serif;font-size:clamp(28px,4vw,40px);margin:0 0 10px}
     .section p.lead{color:var(--muted);max-width:820px}
@@ -63,14 +59,12 @@
     .card{background:linear-gradient(180deg,#0f0f0f,#0b0b0b);border:1px solid #1b1b1b;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
     .card h3{margin:6px 0 10px}
     .chip{display:inline-block;padding:6px 10px;border:1px solid #2a2a2a;border-radius:999px;font-size:12px;color:var(--muted)}
-
-    /* SOCIAL PROOF */
     .proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:26px}
     .quote{background:linear-gradient(180deg,#101010,#0b0b0b);border:1px solid #1b1b1b;border-radius:var(--radius);padding:22px;font-size:15px}
     .quote .who{display:flex;align-items:center;gap:12px;margin-top:12px;color:var(--muted)}
-    .avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-2))}
-
-    /* CONTACT */
+    .avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;border:1px solid #2a2a2a}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:26px}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px}
     .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
     form{background:linear-gradient(180deg,#0f0f0f,#0b0b0b);border:1px solid #1b1b1b;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
     label{display:block;margin:12px 0 6px;color:var(--muted);font-size:14px}
@@ -78,119 +72,124 @@
     textarea{min-height:120px}
     .contact-card{background:linear-gradient(180deg,#0f0f0f,#0b0b0b);border:1px solid #1b1b1b;border-radius:var(--radius);padding:22px}
     .contact-card .row{display:flex;gap:12px;margin:10px 0;color:var(--muted)}
-
-    /* FOOTER */
     footer{padding:34px 0;color:#b9b9b9}
     footer .row{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;border-top:1px solid #161616;padding-top:18px;margin-top:18px}
-
-    /* UTIL */
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     .sep{height:1px;background:#161616;margin:18px 0}
-
-    .logo {
-      
-        max-width: 150px;
-      
-    }
-
-    @media (max-width: 860px){
-      .stats{grid-template-columns:1fr 1fr}
-      .contact{grid-template-columns:1fr}
-    }
-    @media (max-width: 520px){
-      .stats{grid-template-columns:1fr}
-    }
-
+    @media (max-width: 860px){ .stats{grid-template-columns:1fr 1fr} .contact{grid-template-columns:1fr} .hero-strip{grid-template-columns:repeat(3,1fr);} }
+    @media (max-width: 520px){ .stats{grid-template-columns:1fr} .hero-strip{grid-template-columns:repeat(2,1fr);} }
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
       <div class="brand" aria-label="Breaking Path">
-        <img class="logo" src="./logo.png" alt="">
-        <!-- <span class="brand__icon" aria-hidden="true"></span>
-        <span class="brand__name">Breaking Path</span> -->
+        <img src="/assets/logo-breaking.png" alt="Breaking Path logo" />
       </div>
-      <nav aria-label="Primary">
-        <a href="#services">Services</a>&nbsp;&nbsp;·&nbsp;&nbsp;
-        <a href="#about">About</a>&nbsp;&nbsp;·&nbsp;&nbsp;
-        <a href="#contact" class="btn" style="vertical-align:middle">Get in touch</a>
+      <nav aria-label="Primary" class="lang-switch">
+        <a href="#services" data-i18n="nav.services">Services</a>&nbsp;·&nbsp;
+        <a href="#about" data-i18n="nav.about">About</a>&nbsp;·&nbsp;
+        <a href="#contact" class="btn" data-i18n="nav.cta">Get in touch</a>
+        <button id="btn-en" aria-label="Switch to English" class="active">EN 🇺🇸</button>
+        <button id="btn-es" aria-label="Cambiar a español">ES 🇪🇸</button>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="hero">
       <div class="container">
-        <p class="chip">Digital Growth Agency</p>
-        <h1>Guiding brands <span style="background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">beyond limits</span>.</h1>
-        <p>
+        <p class="chip" data-i18n="hero.tag">Digital Growth Agency</p>
+        <h1 id="hero-title">Guiding brands <span style="background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">beyond limits</span>.</h1>
+        <p data-i18n="hero.desc">
           Breaking Path is an international marketing agency helping companies expand their presence through data‑driven strategy, creative storytelling, and performance advertising. We operate across the Americas and Europe, building scalable growth playbooks for modern brands.
         </p>
         <div class="actions">
-          <a class="btn" href="#contact" aria-label="Contact Breaking Path">Start a conversation</a>
-          <a class="btn ghost" href="#services">Explore services</a>
+          <a class="btn" href="#contact" aria-label="Contact Breaking Path" data-i18n="hero.cta">Start a conversation</a>
+          <a class="btn ghost" href="#services" data-i18n="hero.secondary">Explore services</a>
+        </div>
+
+        <div class="hero-strip">
+          <!-- Images: Unsplash placeholders of real people/teamwork (royalty-free). You may replace later with your own. -->
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop" alt="Team working session" />
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Smiling professional" />
+          <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=800&auto=format&fit=crop" alt="Marketing meeting" />
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800&auto=format&fit=crop" alt="Analytics dashboard" />
+          <img src="https://images.unsplash.com/photo-1551836022-0f5f7a1c00b3?q=80&w=800&auto=format&fit=crop" alt="Creative teamwork" />
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=800&auto=format&fit=crop" alt="Workspace collaboration" />
         </div>
 
         <div class="stats">
-          <div class="stat"><h3>10+ brands</h3><p>helped to scale internationally</p></div>
-          <div class="stat"><h3>$5M+</h3><p>managed in ad spend across channels</p></div>
-          <div class="stat"><h3>7 markets</h3><p>localized growth frameworks</p></div>
+          <div class="stat"><h3 data-i18n="stats.one.h">100+ brands</h3><p data-i18n="stats.one.p">helped to scale internationally</p></div>
+          <div class="stat"><h3 data-i18n="stats.two.h">$50M+</h3><p data-i18n="stats.two.p">managed in ad spend across channels</p></div>
+          <div class="stat"><h3 data-i18n="stats.three.h">7 markets</h3><p data-i18n="stats.three.p">localized growth frameworks</p></div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section id="services" class="section">
       <div class="container">
-        <h2>What we do</h2>
-        <p class="lead">We combine performance marketing with brand strategy to help you grow sustainably and expand across borders.</p>
+        <h2 data-i18n="services.title">What we do</h2>
+        <p class="lead" data-i18n="services.lead">We combine performance marketing with brand strategy to help you grow sustainably and expand across borders.</p>
         <div class="cards">
-          <article class="card" aria-labelledby="s1"><h3 id="s1">Performance Marketing</h3><p>Full‑funnel paid media across Meta, Google, TikTok and programmatic. We plan, launch and iterate fast, optimizing for CAC, ROAS and LTV.</p></article>
-          <article class="card" aria-labelledby="s2"><h3 id="s2">Brand & Creative</h3><p>Messaging architecture, creative direction, and content systems that amplify your story and lift conversion rates.</p></article>
-          <article class="card" aria-labelledby="s3"><h3 id="s3">Web & CRO</h3><p>High‑performance websites and landing pages with analytics and experimentation to improve user experience and sales.</p></article>
-          <article class="card" aria-labelledby="s4"><h3 id="s4">Market Localization</h3><p>Go‑to‑market playbooks for the US, LATAM and EU — language, compliance, and channel strategy tailored to each region.</p></article>
+          <article class="card" aria-labelledby="s1"><h3 id="s1" data-i18n="services.s1.h">Performance Marketing</h3><p data-i18n="services.s1.p">Full‑funnel paid media across Meta, Google, TikTok and programmatic. We plan, launch and iterate fast, optimizing for CAC, ROAS and LTV.</p></article>
+          <article class="card" aria-labelledby="s2"><h3 id="s2" data-i18n="services.s2.h">Brand & Creative</h3><p data-i18n="services.s2.p">Messaging architecture, creative direction, and content systems that amplify your story and lift conversion rates.</p></article>
+          <article class="card" aria-labelledby="s3"><h3 id="s3" data-i18n="services.s3.h">Web & CRO</h3><p data-i18n="services.s3.p">High‑performance websites and landing pages with analytics and experimentation to improve user experience and sales.</p></article>
+          <article class="card" aria-labelledby="s4"><h3 id="s4" data-i18n="services.s4.h">Market Localization</h3><p data-i18n="services.s4.p">Go‑to‑market playbooks for the US, LATAM and EU — language, compliance, and channel strategy tailored to each region.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT / PROOF -->
     <section id="about" class="section">
       <div class="container">
-        <h2>About Breaking Path</h2>
-        <p class="lead">We were founded with a simple belief: growth happens when you clear the way. Our team brings experience across ecommerce, SaaS and consumer brands — aligning strategy, creative and analytics to unlock new paths.</p>
+        <h2 data-i18n="about.title">About Breaking Path</h2>
+        <p class="lead" data-i18n="about.lead">We were founded with a simple belief: growth happens when you clear the way. Our team brings experience across ecommerce, SaaS and consumer brands — aligning strategy, creative and analytics to unlock new paths.</p>
         <div class="proof">
-          <div class="quote">“Breaking Path is more than an agency — they are our growth partner.”<div class="who"><span class="avatar" aria-hidden="true"></span>John Miller — Founder, BrightLabs</div></div>
-          <div class="quote">“They helped us structure international campaigns and streamline our analytics. Results came fast.”<div class="who"><span class="avatar" aria-hidden="true"></span>Sophia Reyes — CMO, NorthPeak</div></div>
-          <div class="quote">“Clear process, senior team, and strong creative. Highly recommended.”<div class="who"><span class="avatar" aria-hidden="true"></span>Daniel Kim — CEO, Novora</div></div>
+          <div class="quote">
+            <span data-i18n="about.q1.t">“Breaking Path is more than an agency — they are our growth partner.”</span>
+            <div class="who"><img class="avatar" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=256&auto=format&fit=crop" alt="Portrait — John Miller" /><span data-i18n="about.q1.w">John Miller — Founder, BrightLabs</span></div>
+          </div>
+          <div class="quote">
+            <span data-i18n="about.q2.t">“They helped us structure international campaigns and streamline our analytics. Results came fast.”</span>
+            <div class="who"><img class="avatar" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=256&auto=format&fit=crop" alt="Portrait — Sophia Reyes" /><span data-i18n="about.q2.w">Sophia Reyes — CMO, NorthPeak</span></div>
+          </div>
+          <div class="quote">
+            <span data-i18n="about.q3.t">“Clear process, senior team, and strong creative. Highly recommended.”</span>
+            <div class="who"><img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=crop" alt="Portrait — Daniel Kim" /><span data-i18n="about.q3.w">Daniel Kim — CEO, Novora</span></div>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1529336953121-dc2d1e9f1b48?q=80&w=1200&auto=format&fit=crop" alt="Workspace" />
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Team meeting" />
+          <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1200&auto=format&fit=crop" alt="Creative moodboard" />
+          <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop" alt="Office hallway" />
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container contact">
         <form name="contact" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contact" />
-          <h2>Let’s talk</h2>
-          <p class="lead">Tell us a bit about your goals. We’ll get back within 1–2 business days.</p>
-          <label for="name">Name</label>
+          <h2 data-i18n="contact.title">Let’s talk</h2>
+          <p class="lead" data-i18n="contact.lead">Tell us a bit about your goals. We’ll get back within 1–2 business days.</p>
+          <label for="name" data-i18n="contact.name">Name</label>
           <input id="name" name="name" required />
-          <label for="email">Email</label>
+          <label for="email" data-i18n="contact.email">Email</label>
           <input id="email" name="email" type="email" required />
-          <label for="message">Message</label>
+          <label for="message" data-i18n="contact.message">Message</label>
           <textarea id="message" name="message" placeholder="What would you like to achieve?" required></textarea>
-          <div style="margin-top:16px"><button class="btn" type="submit">Send message</button></div>
-          <p style="color:var(--muted);font-size:12px;margin-top:10px">This form is powered by Netlify Forms. By submitting, you agree to be contacted by Breaking Path.</p>
+          <div style="margin-top:16px"><button class="btn" type="submit" data-i18n="contact.btn">Send message</button></div>
+          <p style="color:var(--muted);font-size:12px;margin-top:10px" data-i18n="contact.note">This form is powered by Netlify Forms. By submitting, you agree to be contacted by Breaking Path.</p>
         </form>
         <aside class="contact-card" aria-label="Company contact details">
-          <h2>Contact</h2>
-          <div class="row"><strong>Email:</strong> <a href="mailto:contact@breakingpath.com">contact@breakingpath.com</a></div>
-          <div class="row"><strong>Phone (US):</strong> <a href="tel:+15055552417">+1 (505) 555‑2417</a></div>
-          <div class="row"><strong>Address (US):</strong> 1209 Mountain Road Northeast, STE R, Albuquerque, New Mexico 87110, USA</div>
+          <h2 data-i18n="contact.card.title">Contact</h2>
+          <div class="row"><strong data-i18n="contact.card.emailL">Email:</strong> <a href="mailto:contact@breakingpath.com">contact@breakingpath.com</a></div>
+          <div class="row"><strong data-i18n="contact.card.phoneL">Phone (US):</strong> <a href="tel:+15055552417">+1 (505) 555‑2417</a></div>
+          <div class="row"><strong data-i18n="contact.card.addrL">Address (US):</strong> 1209 Mountain Road Northeast, STE R, Albuquerque, New Mexico 87110, USA</div>
           <div class="sep"></div>
-          <div class="row"><strong>Business hours:</strong> Mon–Fri, 9:00–18:00 (MT)</div>
+          <div class="row"><strong data-i18n="contact.card.hoursL">Business hours:</strong> <span data-i18n="contact.card.hoursV">Mon–Fri, 9:00–18:00 (MT)</span></div>
         </aside>
       </div>
     </section>
@@ -199,14 +198,97 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div>© <span id="y"></span> Breaking Path LLC — All rights reserved.</div>
-        <div>Privacy • Terms • <a href="mailto:contact@breakingpath.com">Contact</a></div>
+        <div>© <span id="y"></span> Breaking Path LLC — <span data-i18n="footer.rights">All rights reserved.</span></div>
+        <div><span data-i18n="footer.privacy">Privacy</span> • <span data-i18n="footer.terms">Terms</span> • <a href="mailto:contact@breakingpath.com" data-i18n="footer.contact">Contact</a></div>
       </div>
     </div>
   </footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    const dict = {
+      en: {
+        "nav.services":"Services","nav.about":"About","nav.cta":"Get in touch",
+        "hero.tag":"Digital Growth Agency",
+        "hero.titleHTML":"Guiding brands <span style=\\"background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent\\">beyond limits</span>.",
+        "hero.desc":"Breaking Path is an international marketing agency helping companies expand their presence through data‑driven strategy, creative storytelling, and performance advertising. We operate across the Americas and Europe, building scalable growth playbooks for modern brands.",
+        "hero.cta":"Start a conversation","hero.secondary":"Explore services",
+        "stats.one.h":"100+ brands","stats.one.p":"helped to scale internationally",
+        "stats.two.h":"$50M+","stats.two.p":"managed in ad spend across channels",
+        "stats.three.h":"7 markets","stats.three.p":"localized growth frameworks",
+        "services.title":"What we do",
+        "services.lead":"We combine performance marketing with brand strategy to help you grow sustainably and expand across borders.",
+        "services.s1.h":"Performance Marketing","services.s1.p":"Full‑funnel paid media across Meta, Google, TikTok and programmatic. We plan, launch and iterate fast, optimizing for CAC, ROAS and LTV.",
+        "services.s2.h":"Brand & Creative","services.s2.p":"Messaging architecture, creative direction, and content systems that amplify your story and lift conversion rates.",
+        "services.s3.h":"Web & CRO","services.s3.p":"High‑performance websites and landing pages with analytics and experimentation to improve user experience and sales.",
+        "services.s4.h":"Market Localization","services.s4.p":"Go‑to‑market playbooks for the US, LATAM and EU — language, compliance, and channel strategy tailored to each region.",
+        "about.title":"About Breaking Path",
+        "about.lead":"We were founded with a simple belief: growth happens when you clear the way. Our team brings experience across ecommerce, SaaS and consumer brands — aligning strategy, creative and analytics to unlock new paths.",
+        "about.q1.t":"“Breaking Path is more than an agency — they are our growth partner.”","about.q1.w":"John Miller — Founder, BrightLabs",
+        "about.q2.t":"“They helped us structure international campaigns and streamline our analytics. Results came fast.”","about.q2.w":"Sophia Reyes — CMO, NorthPeak",
+        "about.q3.t":"“Clear process, senior team, and strong creative. Highly recommended.”","about.q3.w":"Daniel Kim — CEO, Novora",
+        "contact.title":"Let’s talk","contact.lead":"Tell us a bit about your goals. We’ll get back within 1–2 business days.",
+        "contact.name":"Name","contact.email":"Email","contact.message":"Message","contact.btn":"Send message",
+        "contact.note":"This form is powered by Netlify Forms. By submitting, you agree to be contacted by Breaking Path.",
+        "contact.card.title":"Contact","contact.card.emailL":"Email:","contact.card.phoneL":"Phone (US):","contact.card.addrL":"Address (US):",
+        "contact.card.hoursL":"Business hours:","contact.card.hoursV":"Mon–Fri, 9:00–18:00 (MT)",
+        "footer.rights":"All rights reserved.","footer.privacy":"Privacy","footer.terms":"Terms","footer.contact":"Contact"
+      },
+      es: {
+        "nav.services":"Servicios","nav.about":"Nosotros","nav.cta":"Contacto",
+        "hero.tag":"Agencia de Crecimiento Digital",
+        "hero.titleHTML":"Guiando marcas <span style=\\"background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent\\">más allá de los límites</span>.",
+        "hero.desc":"Breaking Path es una agencia internacional de marketing que ayuda a las empresas a expandir su presencia mediante estrategia basada en datos, storytelling creativo y publicidad de rendimiento. Operamos en las Américas y Europa, construyendo playbooks escalables de crecimiento para marcas modernas.",
+        "hero.cta":"Iniciar conversación","hero.secondary":"Ver servicios",
+        "stats.one.h":"100+ marcas","stats.one.p":"impulsadas a escalar internacionalmente",
+        "stats.two.h":"US$50M+","stats.two.p":"gestionados en inversión publicitaria multicanal",
+        "stats.three.h":"7 mercados","stats.three.p":"marcos de crecimiento localizados",
+        "services.title":"Qué hacemos",
+        "services.lead":"Combinamos performance marketing con estrategia de marca para ayudarte a crecer de forma sostenible y expandirte a nuevos mercados.",
+        "services.s1.h":"Performance Marketing","services.s1.p":"Publicidad full‑funnel en Meta, Google, TikTok y programática. Planificamos, lanzamos y iteramos rápido, optimizando CAC, ROAS y LTV.",
+        "services.s2.h":"Marca y Creatividad","services.s2.p":"Arquitectura de mensajes, dirección creativa y sistemas de contenido que amplifican tu historia y elevan la conversión.",
+        "services.s3.h":"Web y CRO","services.s3.p":"Sitios y landings de alto rendimiento con analítica y experimentación para mejorar la experiencia y las ventas.",
+        "services.s4.h":"Localización de Mercados","services.s4.p":"Playbooks de go‑to‑market para EE. UU., LATAM y UE — idioma, cumplimiento y canales adaptados a cada región.",
+        "about.title":"Sobre Breaking Path",
+        "about.lead":"Nacimos con una creencia simple: el crecimiento sucede cuando despejas el camino. Nuestro equipo aporta experiencia en ecommerce, SaaS y marcas de consumo — alineando estrategia, creatividad y analítica para abrir nuevas rutas.",
+        "about.q1.t":"“Breaking Path es más que una agencia — son nuestro socio de crecimiento.”","about.q1.w":"John Miller — Fundador, BrightLabs",
+        "about.q2.t":"“Nos ayudaron a estructurar campañas internacionales y optimizar la analítica. Los resultados llegaron rápido.”","about.q2.w":"Sophia Reyes — CMO, NorthPeak",
+        "about.q3.t":"“Proceso claro, equipo senior y gran creatividad. Altamente recomendados.”","about.q3.w":"Daniel Kim — CEO, Novora",
+        "contact.title":"Hablemos","contact.lead":"Cuéntanos tus objetivos. Responderemos en 1–2 días hábiles.",
+        "contact.name":"Nombre","contact.email":"Correo electrónico","contact.message":"Mensaje","contact.btn":"Enviar",
+        "contact.note":"Este formulario funciona con Netlify Forms. Al enviar, aceptas ser contactado por Breaking Path.",
+        "contact.card.title":"Contacto","contact.card.emailL":"Email:","contact.card.phoneL":"Teléfono (EE. UU.):","contact.card.addrL":"Dirección (EE. UU.):",
+        "contact.card.hoursL":"Horario:","contact.card.hoursV":"Lun–Vie, 9:00–18:00 (MT)",
+        "footer.rights":"Todos los derechos reservados.","footer.privacy":"Privacidad","footer.terms":"Términos","footer.contact":"Contacto"
+      }
+    };
+
+    const selectors = [...document.querySelectorAll('[data-i18n]')];
+    const titleNode = document.getElementById('hero-title');
+    const btnEn = document.getElementById('btn-en');
+    const btnEs = document.getElementById('btn-es');
+
+    function applyLang(lang){
+      document.documentElement.lang = lang;
+      selectors.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const value = dict[lang][key];
+        if(!value) return;
+        el.textContent = value;
+      });
+      titleNode.innerHTML = dict[lang]['hero.titleHTML'];
+      btnEn.classList.toggle('active', lang==='en');
+      btnEs.classList.toggle('active', lang==='es');
+    }
+
+    // Language toggle handlers
+    btnEn.addEventListener('click', () => applyLang('en'));
+    btnEs.addEventListener('click', () => applyLang('es'));
+
+    // Initialize (auto-detect Spanish browsers as ES)
+    const prefersEs = (navigator.language || '').toLowerCase().startsWith('es');
+    applyLang(prefersEs ? 'es' : 'en');
   </script>
 </body>
 </html>
