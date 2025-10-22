@@ -34,11 +34,9 @@
     .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;gap:12px;align-items:center}
     .brand img{height:40px}
-    .brand__name{font-weight:700;letter-spacing:.4px}
     .nav a{opacity:.9}
     .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:linear-gradient(140deg,var(--gold),var(--gold-2));color:#0a0a0a;font-weight:700;box-shadow:0 8px 22px rgba(212,175,55,.25);border:0;cursor:pointer}
     .btn.ghost{background:transparent;color:var(--text);border:1px solid #2a2a2a}
-    .grid{display:grid;gap:28px}
     .lang-switch{display:flex;gap:10px;align-items:center}
     .lang-switch button{background:transparent;border:1px solid #2a2a2a;color:var(--text);padding:8px 12px;border-radius:999px;cursor:pointer}
     .lang-switch button.active{border-color:var(--gold);color:var(--accent)}
@@ -58,7 +56,6 @@
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:26px}
     .card{background:linear-gradient(180deg,#0f0f0f,#0b0b0b);border:1px solid #1b1b1b;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
     .card h3{margin:6px 0 10px}
-    .chip{display:inline-block;padding:6px 10px;border:1px solid #2a2a2a;border-radius:999px;font-size:12px;color:var(--muted)}
     .proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:26px}
     .quote{background:linear-gradient(180deg,#101010,#0b0b0b);border:1px solid #1b1b1b;border-radius:var(--radius);padding:22px;font-size:15px}
     .quote .who{display:flex;align-items:center;gap:12px;margin-top:12px;color:var(--muted)}
@@ -74,7 +71,6 @@
     .contact-card .row{display:flex;gap:12px;margin:10px 0;color:var(--muted)}
     footer{padding:34px 0;color:#b9b9b9}
     footer .row{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;border-top:1px solid #161616;padding-top:18px;margin-top:18px}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     .sep{height:1px;background:#161616;margin:18px 0}
     @media (max-width: 860px){ .stats{grid-template-columns:1fr 1fr} .contact{grid-template-columns:1fr} .hero-strip{grid-template-columns:repeat(3,1fr);} }
     @media (max-width: 520px){ .stats{grid-template-columns:1fr} .hero-strip{grid-template-columns:repeat(2,1fr);} }
@@ -92,6 +88,7 @@
         <a href="#contact" class="btn" data-i18n="nav.cta">Get in touch</a>
         <button id="btn-en" aria-label="Switch to English" class="active">EN 🇺🇸</button>
         <button id="btn-es" aria-label="Cambiar a español">ES 🇪🇸</button>
+        <button id="btn-pt" aria-label="Mudar para português do Brasil">PT 🇧🇷</button>
       </nav>
     </div>
   </header>
@@ -110,7 +107,6 @@
         </div>
 
         <div class="hero-strip">
-          <!-- Images: Unsplash placeholders of real people/teamwork (royalty-free). You may replace later with your own. -->
           <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop" alt="Team working session" />
           <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Smiling professional" />
           <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=800&auto=format&fit=crop" alt="Marketing meeting" />
@@ -120,8 +116,8 @@
         </div>
 
         <div class="stats">
-          <div class="stat"><h3 data-i18n="stats.one.h">10+ brands</h3><p data-i18n="stats.one.p">helped to scale internationally</p></div>
-          <div class="stat"><h3 data-i18n="stats.two.h">$5M+</h3><p data-i18n="stats.two.p">managed in ad spend across channels</p></div>
+          <div class="stat"><h3 data-i18n="stats.one.h">100+ brands</h3><p data-i18n="stats.one.p">helped to scale internationally</p></div>
+          <div class="stat"><h3 data-i18n="stats.two.h">$50M+</h3><p data-i18n="stats.two.p">managed in ad spend across channels</p></div>
           <div class="stat"><h3 data-i18n="stats.three.h">7 markets</h3><p data-i18n="stats.three.p">localized growth frameworks</p></div>
         </div>
       </div>
@@ -147,20 +143,20 @@
         <div class="proof">
           <div class="quote">
             <span data-i18n="about.q1.t">“Breaking Path is more than an agency — they are our growth partner.”</span>
-            <div class="who"><img class="avatar" src="https://plus.unsplash.com/premium_photo-1671656349218-5218444643d8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000" alt="Portrait — John Miller" /><span data-i18n="about.q1.w">John Miller — Founder, BrightLabs</span></div>
+            <div class="who"><img class="avatar" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=256&auto=format&fit=crop" alt="Portrait — John Miller" /><span data-i18n="about.q1.w">John Miller — Founder, BrightLabs</span></div>
           </div>
           <div class="quote">
             <span data-i18n="about.q2.t">“They helped us structure international campaigns and streamline our analytics. Results came fast.”</span>
-            <div class="who"><img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=crop" alt="Portrait — Sophia Reyes" /><span data-i18n="about.q2.w">Sophia Reyes — CMO, NorthPeak</span></div>
+            <div class="who"><img class="avatar" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=256&auto=format&fit=crop" alt="Portrait — Sophia Reyes" /><span data-i18n="about.q2.w">Sophia Reyes — CMO, NorthPeak</span></div>
           </div>
           <div class="quote">
             <span data-i18n="about.q3.t">“Clear process, senior team, and strong creative. Highly recommended.”</span>
-            <div class="who"><img class="avatar" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=256&auto=format&fit=crop" alt="Portrait — Daniel Kim" /><span data-i18n="about.q3.w">Daniel Kim — CEO, Novora</span></div>
+            <div class="who"><img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=crop" alt="Portrait — Daniel Kim" /><span data-i18n="about.q3.w">Daniel Kim — CEO, Novora</span></div>
           </div>
         </div>
 
         <div class="gallery">
-          <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hhcmVkJTIwb2ZmaWNlfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000" alt="Workspace" />
+          <img src="https://images.unsplash.com/photo-1529336953121-dc2d1e9f1b48?q=80&w=1200&auto=format&fit=crop" alt="Workspace" />
           <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Team meeting" />
           <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1200&auto=format&fit=crop" alt="Creative moodboard" />
           <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop" alt="Office hallway" />
@@ -179,14 +175,14 @@
           <label for="email" data-i18n="contact.email">Email</label>
           <input id="email" name="email" type="email" required />
           <label for="message" data-i18n="contact.message">Message</label>
-          <textarea id="message" name="message" placeholder="What would you like to achieve?" data-i18n="contact.placeholder" required></textarea>
+          <textarea id="message" name="message" placeholder="What would you like to achieve?" required></textarea>
           <div style="margin-top:16px"><button class="btn" type="submit" data-i18n="contact.btn">Send message</button></div>
           <p style="color:var(--muted);font-size:12px;margin-top:10px" data-i18n="contact.note">This form is powered by Netlify Forms. By submitting, you agree to be contacted by Breaking Path.</p>
         </form>
         <aside class="contact-card" aria-label="Company contact details">
           <h2 data-i18n="contact.card.title">Contact</h2>
           <div class="row"><strong data-i18n="contact.card.emailL">Email:</strong> <a href="mailto:contact@breakingpath.com">contact@breakingpath.com</a></div>
-          <div class="row"><strong data-i18n="contact.card.phoneL">Phone (US):</strong> <a href="tel:+15055552417">+ 1 (866) 338 0476</a></div>
+          <div class="row"><strong data-i18n="contact.card.phoneL">Phone (US):</strong> <a href="tel:+15055552417">+1 (866) 338 0476</a></div>
           <div class="row"><strong data-i18n="contact.card.addrL">Address (US):</strong> 1209 Mountain Road Northeast, STE R, Albuquerque, New Mexico 87110, USA</div>
           <div class="sep"></div>
           <div class="row"><strong data-i18n="contact.card.hoursL">Business hours:</strong> <span data-i18n="contact.card.hoursV">Mon–Fri, 9:00–18:00 (MT)</span></div>
@@ -197,7 +193,7 @@
 
   <footer>
     <div class="container">
-      <div class="row">
+      <div class="row" style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;border-top:1px solid #161616;padding-top:18px;margin-top:18px">
         <div>© <span id="y"></span> Breaking Path LLC — <span data-i18n="footer.rights">All rights reserved.</span></div>
         <div><span data-i18n="footer.privacy">Privacy</span> • <span data-i18n="footer.terms">Terms</span> • <a href="mailto:contact@breakingpath.com" data-i18n="footer.contact">Contact</a></div>
       </div>
@@ -246,7 +242,6 @@
     "contact.name": "Name",
     "contact.email": "Email",
     "contact.message": "Message",
-    "contact.placeholder": "What would you like to achieve?",
     "contact.btn": "Send message",
     "contact.note": "This form is powered by Netlify Forms. By submitting, you agree to be contacted by Breaking Path.",
     "contact.card.title": "Contact",
@@ -298,7 +293,6 @@
     "contact.name": "Nombre",
     "contact.email": "Correo electrónico",
     "contact.message": "Mensaje",
-    "contact.placeholder": "¿Qué te gustaría lograr?",
     "contact.btn": "Enviar",
     "contact.note": "Este formulario funciona con Netlify Forms. Al enviar, aceptas ser contactado por Breaking Path.",
     "contact.card.title": "Contacto",
@@ -311,6 +305,57 @@
     "footer.privacy": "Privacidad",
     "footer.terms": "Términos",
     "footer.contact": "Contacto"
+  },
+  pt: {
+    "nav.services": "Serviços",
+    "nav.about": "Sobre",
+    "nav.cta": "Fale conosco",
+    "hero.tag": "Agência de Growth Digital",
+    "hero.titleHTML": "Guiando marcas <span style=\"background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent\">além dos limites</span>.",
+    "hero.desc": "A Breaking Path é uma agência internacional de marketing que ajuda empresas a expandirem sua presença com estratégia orientada por dados, storytelling criativo e mídia de performance. Atuamos nas Américas e Europa, construindo playbooks escaláveis de crescimento para marcas modernas.",
+    "hero.cta": "Começar uma conversa",
+    "hero.secondary": "Ver serviços",
+    "stats.one.h": "50+ marcas",
+    "stats.one.p": "impulsionadas a escalar internacionalmente",
+    "stats.two.h": "US$5M+",
+    "stats.two.p": "gerenciados em investimento de mídia multicanal",
+    "stats.three.h": "7 mercados",
+    "stats.three.p": "frameworks de crescimento localizados",
+    "services.title": "O que fazemos",
+    "services.lead": "Unimos performance marketing e estratégia de marca para você crescer de forma sustentável e expandir fronteiras.",
+    "services.s1.h": "Performance Marketing",
+    "services.s1.p": "Mídia full‑funnel em Meta, Google, TikTok e programática. Planejamos, lançamos e iteramos rápido, otimizando CAC, ROAS e LTV.",
+    "services.s2.h": "Marca & Criativo",
+    "services.s2.p": "Arquitetura de mensagens, direção criativa e sistemas de conteúdo que ampliam sua história e elevam a conversão.",
+    "services.s3.h": "Web & CRO",
+    "services.s3.p": "Sites e landing pages de alta performance com analytics e experimentação para melhorar a experiência e as vendas.",
+    "services.s4.h": "Localização de Mercados",
+    "services.s4.p": "Playbooks de go‑to‑market para EUA, LATAM e UE — idioma, compliance e canais adaptados a cada região.",
+    "about.title": "Sobre a Breaking Path",
+    "about.lead": "Nascemos com uma crença simples: o crescimento acontece quando você abre caminho. Nosso time reúne experiência em ecommerce, SaaS e marcas de consumo — alinhando estratégia, criatividade e analytics para destravar novas rotas.",
+    "about.q1.t": "“A Breaking Path é mais do que uma agência — é nossa parceira de crescimento.”",
+    "about.q1.w": "John Miller — Fundador, BrightLabs",
+    "about.q2.t": "“Ajudaram a estruturar campanhas internacionais e otimizar nossa análise. Os resultados vieram rápido.”",
+    "about.q2.w": "Sophia Reyes — CMO, NorthPeak",
+    "about.q3.t": "“Processo claro, equipe sênior e um criativo forte. Recomendamos muito.”",
+    "about.q3.w": "Daniel Kim — CEO, Novora",
+    "contact.title": "Vamos conversar",
+    "contact.lead": "Conte um pouco dos seus objetivos. Retornaremos em 1–2 dias úteis.",
+    "contact.name": "Nome",
+    "contact.email": "Email",
+    "contact.message": "Mensagem",
+    "contact.btn": "Enviar",
+    "contact.note": "Este formulário é alimentado pelo Netlify Forms. Ao enviar, você concorda em ser contatado pela Breaking Path.",
+    "contact.card.title": "Contato",
+    "contact.card.emailL": "Email:",
+    "contact.card.phoneL": "Telefone (EUA):",
+    "contact.card.addrL": "Endereço (EUA):",
+    "contact.card.hoursL": "Horário comercial:",
+    "contact.card.hoursV": "Seg–Sex, 9:00–18:00 (MT)",
+    "footer.rights": "Todos os direitos reservados.",
+    "footer.privacy": "Privacidade",
+    "footer.terms": "Termos",
+    "footer.contact": "Contato"
   }
 };
 
@@ -318,41 +363,28 @@
     const titleNode = document.getElementById('hero-title');
     const btnEn = document.getElementById('btn-en');
     const btnEs = document.getElementById('btn-es');
+    const btnPt = document.getElementById('btn-pt');
 
     function applyLang(lang){
-    btnEn.setAttribute('aria-label', lang === 'en' ? 'Switch to English' : 'Cambiar a español');
-    btnEs.setAttribute('aria-label', lang === 'en' ? 'Cambiar a español' : 'Switch to English');
-      document.documentElement.lang = lang;
+      document.documentElement.lang = (lang==='pt'?'pt-BR':lang);
       selectors.forEach(el => {
-        const textarea = document.getElementById('message');
-        textarea.placeholder = dict[lang]['contact.placeholder'] || '';
         const key = el.getAttribute('data-i18n');
         const value = dict[lang][key];
         if(!value) return;
         el.textContent = value;
       });
-      // Traduz placeholder do textarea
-const textarea = document.querySelector('#message');
-if (textarea) {
-  textarea.placeholder = dict[lang]['contact.placeholder'] || 'What would you like to achieve?';
-}
-
-// Atualiza aria-labels dinâmicos pros botões
-btnEn.setAttribute('aria-label', lang === 'en' ? 'Switch to English' : 'Cambiar a español');
-btnEs.setAttribute('aria-label', lang === 'en' ? 'Cambiar a español' : 'Switch to English');
       titleNode.innerHTML = dict[lang]['hero.titleHTML'];
-      btnEn.classList.toggle('active', lang==='en');
-      btnEs.classList.toggle('active', lang==='es');
-
+      [btnEn, btnEs, btnPt].forEach(b => b.classList.remove('active'));
+      ({en:btnEn, es:btnEs, pt:btnPt}[lang]).classList.add('active');
     }
 
-    // Language toggle handlers
     btnEn.addEventListener('click', () => applyLang('en'));
     btnEs.addEventListener('click', () => applyLang('es'));
+    btnPt.addEventListener('click', () => applyLang('pt'));
 
-    // Initialize (auto-detect Spanish browsers as ES)
-    const prefersEs = (navigator.language || '').toLowerCase().startsWith('es');
-    applyLang(prefersEs ? 'es' : 'en');
+    const navLang = (navigator.language || '').toLowerCase();
+    const initial = navLang.startsWith('es') ? 'es' : (navLang.startsWith('pt') ? 'pt' : 'en');
+    applyLang(initial);
   </script>
 </body>
 </html>
